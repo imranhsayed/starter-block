@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const glob = require('glob');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin'); // https://webpack.js.org/plugins/copy-webpack-plugin/
 
 const entries = glob.sync('src/blocks/**/index.js');
@@ -84,7 +85,8 @@ module.exports = {
       },
     },
     minimizer: defaultConfig.optimization.minimizer.concat([
-      new OptimizeCSSAssetsPlugin({}),
+      // new OptimizeCSSAssetsPlugin({}),
+      new CssMinimizerPlugin(),
     ]),
   },
 };
