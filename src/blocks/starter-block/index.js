@@ -12,8 +12,10 @@ import { registerBlockType } from '@wordpress/blocks';
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
+import './editor.scss';
 import './style.scss';
-import metadata from './block.json';
+
+import './block.json';
 
 /**
  * Internal dependencies
@@ -26,14 +28,14 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType( 'create-block/starter-block', {
-	/**
-	 * @see ./edit.js
-	 */
-	edit: Edit,
+registerBlockType('create-block/starter-block', {
+  /**
+   * @see ./edit.js
+   */
+  edit: Edit,
 
-	/**
-	 * @see ./save.js
-	 */
-	save,
-} );
+  /**
+   * @see ./save.js
+   */
+  save,
+});

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Starter Block
  * Description:       Example block written with ESNext standard and JSX support – build step required.
@@ -13,16 +14,16 @@
  * @package           create-block
  */
 
-if ( ! defined( 'STARTER_BLOCK_DIR_PATH' ) ) {
-	define( 'STARTER_BLOCK_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+if (!defined('STARTER_BLOCK_DIR_PATH')) {
+	define('STARTER_BLOCK_DIR_PATH', untrailingslashit(plugin_dir_path(__FILE__)));
 }
 
-if ( ! defined( 'STARTER_BLOCK_SRC_DIR_PATH' ) ) {
-	define( 'STARTER_BLOCK_SRC_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/src' );
+if (!defined('STARTER_BLOCK_SRC_DIR_PATH')) {
+	define('STARTER_BLOCK_SRC_DIR_PATH', untrailingslashit(plugin_dir_path(__FILE__)) . '/src');
 }
 
-if ( !defined( 'STARTER_BLOCK_BUILD_DIR' ) ) {
-	define( 'STARTER_BLOCK_BUILD_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/build' );
+if (!defined('STARTER_BLOCK_BUILD_DIR')) {
+	define('STARTER_BLOCK_BUILD_DIR', untrailingslashit(plugin_dir_path(__FILE__)) . '/build');
 }
 
 /**
@@ -32,7 +33,8 @@ if ( !defined( 'STARTER_BLOCK_BUILD_DIR' ) ) {
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-function create_block_starter_block_block_init() {
-	register_block_type( STARTER_BLOCK_SRC_DIR_PATH . '/blocks/starter-block' );
+function create_block_starter_block_block_init()
+{
+	register_block_type(STARTER_BLOCK_BUILD_DIR . '/blocks/starter-block');
 }
-add_action( 'init', 'create_block_starter_block_block_init' );
+add_action('init', 'create_block_starter_block_block_init');

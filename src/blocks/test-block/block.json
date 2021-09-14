@@ -1,16 +1,16 @@
 {
-	"apiVersion": 2,
-	"name": "create-block/test-block",
-	"version": "0.1.0",
-	"title": "Test Block",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"supports": {
-		"html": false
-	},
-	"textdomain": "starter-block",
-	"editorScript": "file:./build/blocks/test-block/index.js",
-	"editorStyle": "file:./build/blocks/test-block/editor.css",
-	"style": "file:./build/blocks/test-block/style-index.css"
+  "apiVersion": 2,
+  "name": "create-block/test-block",
+  "version": "0.1.0",
+  "title": "Test Block",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block written with ESNext standard and JSX support – build step required.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "starter-block",
+  "editorScript": "file:./test-block/index.js",
+  "editorStyle": "file:./test-block/editor.css",
+  "style": "file:./test-block/style.css"
 }
